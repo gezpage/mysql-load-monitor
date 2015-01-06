@@ -1,0 +1,27 @@
+<?php
+
+// Set the minimum number of mysql processes that will trigger an alert
+define('MIN_PROCESSES_TO_WARN', 4);
+
+// Leave this enabled if you wish to output console info
+define('OUTPUT_TEXT', true);
+
+// Enable or disable email alerts
+define('EMAIL_ENABLED', true);
+
+// Subject line for the email
+define('EMAIL_SUBJECT', 'MySQL Load Warning!');
+
+// List of email addresses to send alerts to
+define('EMAIL_RECIPIENTS', serialize(array(
+    'someone@email.com',
+)));
+
+// Database hostname
+define('DB_HOST', 'XXXXXXXX');
+
+// Database username
+define('DB_USER', 'XXXXXXXX');
+
+// Database password
+define('DB_PASSWORD', 'XXXXXXXX');
