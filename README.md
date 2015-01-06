@@ -12,6 +12,11 @@ This is not intended to be used permanently but can at least warn you in
 desperate times so you are prepared for calls from people that cannot
 access your application or website!
 
+## Compatibility
+
+Will work on PHP 5.2 and above, and requires PDO for MySQL access.
+Intended to be used with the Linux crontab.
+
 ## Configuration
 
 Copy mysql_load_check_config.dist to mysql_load_check_config.php and
