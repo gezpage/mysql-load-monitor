@@ -10,9 +10,9 @@ MySQL processes and the number that is queued.
 
 This is not intended to be used permanently but can at least warn you in
 desperate times so you are prepared for calls from people that cannot
-access your website!
+access your application or website!
 
-## Set up
+## Configuration
 
 Copy mysql_load_check_config.dist to mysql_load_check_config.php and
 edit it, filling in your database and email configuration.
@@ -27,7 +27,7 @@ that a rogue SQL query has locked tables and is causing a bottleneck.
 If you only wish to test it on the command line, you can disable the
 email functionality with EMAIL_ENABLED.
 
-## Using
+## How to use
 
 The script is meant to be run on the console or in Crontab. 
 
@@ -38,7 +38,7 @@ Simply run it with the php executable:
     php mysql_load_check.php
 
 If you are only testing set the MIN_PROCSSES_TO_WARN quite low so you
-can trigger an warning.
+can trigger a warning and see it working.
 
 ### Automatic load checks with Crontab
 
@@ -49,10 +49,11 @@ On the linux console enter the crontab edit page with:
 
     crontab -e
 
-and enter a line like so to check every 5 minutes:
+and enter a line like it will check every 5 minutes, or change to whatever 
+you like:
 
     */5 * * * * php /path/to/files/mysql_load_check.php
 
 Save and exit the crontab editor and as a sanity check choose a low
-MIN_PROCSESES_TO_WARN setting and ensure alert emails are coming
+MIN_PROCESSES_TO_WARN setting and ensure alert emails are coming
 through, then change it to the real setting you wish to warn on.
